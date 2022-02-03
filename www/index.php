@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../../marchmania-portal/vendor/engaged-nation/portal-core/FrontEnd/Bootstrap/client-front-end.php'; ?>
+<?php require_once __DIR__ . '/../../budlight-mm-portal/vendor/engaged-nation/portal-core/FrontEnd/Bootstrap/client-front-end.php'; ?>
 <?php $clientDBName = $enConfigClient['environment']['database_name'];
 // planing to check the database name and change the client name for title
 $title = $description = '';
@@ -6,7 +6,7 @@ $title = $description = '';
 $title = 'Million Dollar March Mania Challenge presented by _____';
 $description = "Take a shot at becoming a millionaire during the men's college basketball tournament! Play free games to win cash prizes and more all the way through the Big Dance.";
 
-if ($clientDBName == 'marchmania_portal')
+if ($clientDBName == 'budlight-mm_portal')
     $title = "Welcome to the 2022 Million Dollar March Mania Challenge.";
     $description = "Take a shot at becoming a millionaire during the men's college basketball tournament! Play free games to win cash prizes and more all the way through the Big Dance.";
 ?>
@@ -14,7 +14,7 @@ if ($clientDBName == 'marchmania_portal')
 <html lang="en" class="setTo100 themed-layout">
 <head>
     <title><?php echo $title; ?></title>
-    <?php require_once __DIR__ . '/../../marchmania-portal/vendor/engaged-nation/portal-core/GoogleTagManager/Resources/public/gtm.php'; ?>
+    <?php require_once __DIR__ . '/../../budlight-mm-portal/vendor/engaged-nation/portal-core/GoogleTagManager/Resources/public/gtm.php'; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <meta name="description" content="<?php echo $description; ?>">
     <base href="//<?php echo $enConfigClient['environment']['site_front_end']; ?>"/>
@@ -70,6 +70,6 @@ if ($clientDBName == 'marchmania_portal')
             }(jQuery)
         );
     </script>
-    <script src="//<?php echo $enConfigClient['environment']['site_portal']; ?>/lib/js/engage.php?client_name=marchmania&client_id=9beb2c53b184deb77e3fbf266f879ae3" type="text/javascript"></script>
+    <script src="//<?php echo $enConfigClient['environment']['site_portal']; ?>/lib/js/engage.php?client_name=budlight-mm&client_id=35c269cf67126d509f64cc28ed64e5a6" type="text/javascript"></script>
 </body>
 </html>
