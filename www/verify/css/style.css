@@ -1,0 +1,437 @@
+@font-face {
+    font-family: 'TitlingGothicFBCompressed-Medium';
+    src: url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBCompressed-Medium.otf');
+    src: url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBCompressed-Medium.eot#iefix') format("embedded-opentype"),
+    url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBCompressed-Medium.woff2') format("woff2"),
+    url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBCompressed-Medium.woff') format("woff"),
+    url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBCompressed-Medium.ttf') format("truetype"),
+    url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBCompressed-Medium.svg#TitlingGothicFBCompressed-Medium') format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'TitlingGothicFBNarrow-Standard';
+    src: url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBNarrow-Standard.otf');
+    src: url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBNarrow-Standard.eot#iefix') format("embedded-opentype"),
+    url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBNarrow-Standard.woff2') format("woff2"),
+    url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBNarrow-Standard.woff') format("woff"),
+    url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBNarrow-Standard.ttf') format("truetype"),
+    url('https://www.budlighthoopsindy.com/fonts/TitlingGothicFBNarrow-Standard.svg#TitlingGothicFBNarrow-Standard') format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+html, body {
+    height: 100%;
+}
+
+body .optanon-alert-box-wrapper {
+    padding: 15px 0;
+}
+
+body .optanon-alert-box-wrapper .optanon-alert-box-bg p {
+    max-width: 75%;
+    font-family: 'TitlingGothicFBNarrow-Standard', sans-serif;
+}
+
+body .optanon-alert-box-wrapper .optanon-alert-box-bg p a {
+    font-family: 'TitlingGothicFBNarrow-Standard', sans-serif;
+}
+
+body .optanon-alert-box-wrapper .optanon-alert-box-bg p a:focus,
+body .optanon-alert-box-wrapper .optanon-alert-box-bg p a:hover {
+    outline: none;
+}
+
+body .optanon-alert-box-bg .optanon-alert-box-button-container {
+    margin-top: -30px;
+}
+
+body .optanon-alert-box-wrapper .optanon-button-more .optanon-alert-box-button-middle,
+body .optanon-alert-box-wrapper .optanon-alert-box-button-middle {
+    background: none !important;
+    border: none !important;
+}
+
+.optanon-alert-box-bottom-top {
+    display: none;
+}
+
+#verify-age-form,
+#verify-age-failed {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+#verify-age-form .wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#verify-age-form .wrapper .justify-content-center {
+    margin: 0;
+}
+
+#verify-age-form .wrapper .justify-content-center form {
+    border: solid 5px #428bca;
+    border-radius: 13px;
+    padding: 0 0 20px 0;
+}
+
+#verify-age-failed .failedWrapper {
+    border: solid 5px #428bca;
+    border-radius: 13px;
+    background: #FFFFFF;
+    color: #000;
+    padding-bottom: 20px;
+}
+
+#verify-age-failed .failedWrapper h1.text-center {
+    font-family: 'TitlingGothicFBNarrow-Standard', sans-serif;
+}
+
+#verify-age-form .messageWrapper {
+    background: #061148;
+    padding: 40px 0;
+}
+
+#verify-age-form .messageWrapper .lines:not(.line3) {
+    margin-bottom: 5px;
+}
+
+#verify-age-form .messageWrapper .line1 {
+    font-family: 'TitlingGothicFBNarrow-Standard', sans-serif;
+    font-size: 20px;
+    letter-spacing: .58px;
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 1em;
+}
+
+#verify-age-form .messageWrapper .line2 {
+    font-family: 'TitlingGothicFBCompressed-Medium', sans-serif;
+    font-size: 50px;
+    letter-spacing: 2.8px;
+    text-align: center;
+    color: #01a0e2;
+    line-height: 1.2em;
+}
+
+#verify-age-form .messageWrapper .line3 {
+    font-family: 'TitlingGothicFBNarrow-Standard', sans-serif;
+    font-size: 16px;
+    letter-spacing: .48px;
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 1em;
+}
+
+#verify-age-form .mb-4 {
+    font-family: 'TitlingGothicFBNarrow-Standard', sans-serif;
+    font-size: 18px;
+    line-height: 1.2em;
+    color: #061148;
+    margin-top: 20px;
+}
+
+.h1 {
+    font-size: 18px;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem!important;
+}
+
+.form-row {
+    margin-bottom: 18px;
+}
+
+.button,
+.btn-primary:not(:disabled):not(.disabled),
+button:not(.navbar-toggle):not(.iziModal-button-close):not(.iziToast-close),
+input[type='submit'],
+body .optanon-alert-box-wrapper .optanon-button-more .optanon-alert-box-button-middle button,
+body .optanon-alert-box-wrapper .optanon-alert-box-button-middle button {
+    background-color: #01a0e2;
+    font-family: "TitlingGothicFBCompressed-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 1.21;
+    letter-spacing: .84px;
+    text-align: center;
+    color: #ffffff;
+    width: 196px;
+    height: 44px;
+    border-radius: 7px;
+    border: none;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    padding: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    outline: none;
+    margin: 0 auto;
+    display: block;
+}
+
+body .optanon-alert-box-wrapper .optanon-button-more .optanon-alert-box-button-middle button,
+body .optanon-alert-box-wrapper .optanon-alert-box-button-middle button  {
+    font-weight: 400;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.button:active,
+body .optanon-alert-box-wrapper .optanon-button-more .optanon-alert-box-button-middle button:active,
+body .optanon-alert-box-wrapper .optanon-alert-box-button-middle button:active {
+    background: #01a0e2;
+    color: #ffffff;
+}
+
+.btn-primary:focus,
+.button:focus,
+body .optanon-alert-box-wrapper .optanon-button-more .optanon-alert-box-button-middle button:focus,
+body .optanon-alert-box-wrapper .optanon-alert-box-button-middle button:focus {
+    box-shadow: none;
+    background: #01a0e2;
+    color: #ffffff;
+}
+
+.img-wrapper {
+    text-align: center;
+}
+
+#verify-age-form .mb-3 {
+    margin: 0;
+    margin-bottom: 0 !important;
+}
+
+.h1 {
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+}
+
+label {
+    font-family: 'TitlingGothicFBNarrow-Standard', sans-serif;
+    font-size: 16px;
+    display: block;
+    color: #002791;
+    text-transform: uppercase;
+}
+
+#verify-age-form {
+    padding-bottom: 100px;
+}
+
+#verify-age-form .custom-select {
+    max-width: 167px;
+    border: solid 2px #01a0e2;
+    border-radius: 9px;
+}
+
+.page-footer {
+    color: #000;
+    font-size: 12px;
+    font-family: 'TitlingGothicFBNarrow-Standard', sans-serif;
+    margin: 30px auto;
+    text-align: center;
+    max-width: 920px;
+    line-height: 1.29;
+}
+
+.page-footer .row {
+    margin-bottom: 10px;
+}
+
+.page-footer a {
+    color: #01a0e2;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+@media (max-width: 1199px) {
+    #verify-age-form {
+        padding-bottom: 120px;
+    }
+}
+
+@media (max-width: 991px) {
+    body .optanon-alert-box-wrapper .optanon-alert-box-body {
+        margin-right: 20px;
+        margin-left: 20px;
+        padding-top: 10px;
+    }
+
+    body .optanon-alert-box-bg .optanon-alert-box-button-container {
+        position: relative;
+        text-align: center;
+        margin: 5px;
+        top: auto;
+        right: auto;
+        padding-right: 0;
+    }
+
+    body .optanon-alert-box-wrapper .optanon-alert-box-bg p {
+        max-width: initial;
+        line-height: 1.2;
+    }
+
+    body .optanon-alert-box-wrapper .optanon-alert-box-button {
+        float: none;
+        display: inline-block;
+    }
+
+    body .optanon-alert-box-wrapper .optanon-alert-box-bottom-padding {
+      padding-bottom: 0;
+    }
+
+    #verify-age-form {
+        padding-bottom: 170px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .form-row {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #verify-age-form {
+        padding-bottom: 200px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .form-row {
+        width: 90%;
+    }
+
+    .h1,
+    .page-footer {
+        width: 95%;
+    }
+
+    body .optanon-alert-box-wrapper {
+        padding: 0;
+    }
+
+    body .optanon-alert-box-wrapper .optanon-alert-box-bg p {
+        font-size: 12px;
+    }
+
+    body .optanon-alert-box-bg .optanon-alert-box-button-container {
+        display: flex;
+    }
+
+    body .optanon-alert-box-wrapper .optanon-alert-box-button.optanon-button-allow {
+        margin: 0 10px 10px 30px;
+    }
+
+    body .optanon-alert-box-wrapper .optanon-alert-box-button {
+        margin: 0 20px 10px 10px;
+    }
+
+    body .optanon-alert-box-wrapper .optanon-alert-box-button-middle button.accept-cookies-button,
+    body .optanon-alert-box-wrapper .optanon-alert-box-button-middle button.cookie-settings-button {
+        height: 30px;
+        width: 120px;
+    }
+
+    #verify-age-form {
+        padding-bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body .optanon-alert-box-wrapper .optanon-alert-box-button.optanon-button-allow {
+        margin: 0 10px 10px 20px;
+    }
+
+    #verify-age-form {
+        padding-bottom: 140px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body .optanon-alert-box-wrapper .optanon-alert-box-bg p {
+        font-size: 10px;
+    }
+
+    body .optanon-alert-box-wrapper .optanon-alert-box-button-middle button.accept-cookies-button,
+    body .optanon-alert-box-wrapper .optanon-alert-box-button-middle button.cookie-settings-button  {
+        font-size: 12px;
+        margin: initial;
+    }
+
+    #verify-age-form {
+        padding-bottom: 120px;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .h1 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    .h1 {
+        font-size: calc(18px + 2 * ((100vw - 425px) / 599));;
+    }
+
+    .button,
+    .btn-primary:not(:disabled):not(.disabled),
+    button:not(.navbar-toggle):not(.iziModal-button-close):not(.iziToast-close),
+    input[type='submit'],
+    body .optanon-alert-box-wrapper .optanon-button-more .optanon-alert-box-button-middle button  {
+        font-size: calc(16px + 9 * ((100vw - 425px) / 599));
+    }
+
+    .page-footer {
+        font-size: calc(12px + 2 * ((100vw - 425px) / 599));
+    }
+
+    #verify-age-form .messageWrapper .line1 {
+        font-size: calc(20px + 4 * ((100vw - 425px) / 599));
+    }
+
+    #verify-age-form .messageWrapper .line2 {
+        font-size: calc(50px + 20 * ((100vw - 425px) / 599));
+    }
+
+    #verify-age-form .messageWrapper .line3 {
+        font-size: calc(16px + 4 * ((100vw - 425px) / 599));
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .h1 {
+        font-size: 20px;
+    }
+
+    .button,
+    .btn-primary:not(:disabled):not(.disabled),
+    button:not(.navbar-toggle):not(.iziModal-button-close):not(.iziToast-close),
+    input[type='submit'],
+    body .optanon-alert-box-wrapper .optanon-button-more .optanon-alert-box-button-middle button  {
+        font-size: 25px;
+    }
+
+    .page-footer {
+        font-size: 14px;
+    }
+
+    #verify-age-form .messageWrapper .line1 {
+        font-size: 24px;
+    }
+
+    #verify-age-form .messageWrapper .line2 {
+        font-size: 70px;
+    }
+
+    #verify-age-form .messageWrapper .line3 {
+        font-size: 20px;
+    }
+}
