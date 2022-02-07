@@ -46,12 +46,12 @@ $registrationAgeMinimum = $enConfigClient->getDatabaseConfig('registration_age_m
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#FFFFFF">
 
-        <!-- OneTrust Cookies Consent Notice start for budlighthoopsindy.com -->
+        <!-- OneTrust Cookies Consent Notice start for https://www.budlighthoopschallenge.com -->
         <script src="https://cdn.cookielaw.org/consent/415c16ee-d80b-4eec-882c-530ee5a51e22.js" type="text/javascript" charset="UTF-8"></script>
         <script type="text/javascript">
         function OptanonWrapper() { }
         </script>
-        <!-- OneTrust Cookies Consent Notice end for budlighthoopsindy.com -->
+        <!-- OneTrust Cookies Consent Notice end for https://www.budlighthoopschallenge.com -->
 
         <script>
             var EngagedNation = EngagedNation || {};
@@ -65,40 +65,20 @@ $registrationAgeMinimum = $enConfigClient->getDatabaseConfig('registration_age_m
         <script src="/verify/js/init.js?v=<?php echo $assetVersion ?>"></script>
     </head>
 
-    <body>
-        <?php
-            // Client GTM. Only fire on PROD environment.
-            if ($enConfigClient['environment']['env'] == 'prod') {
-        ?>
-            <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDR3H7X"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) -->
-        <?php } ?>
-        <div id="verify-age-form" class="container-fluid pt-4">
-            <div class="wrapper">
-                <div class="row justify-content-center">
-
-                    <form class="col-sm-12 col-md-9 col-xl-5" autocomplete="off" novalidate>
-                        <div class="img-wrapper">
-                            <img src="https://budlight-mm-uploads.s3-us-west-2.amazonaws.com/images/logout/Bud-Light-Indy-MDMM-500h.png" class="img-fluid mb-3">
+    <body id="verify-age-wrapper" style="background: url(<?php echo $enConfigClient['environment']['s3_uploads_url']; ?>/images/logout/loggedOutLogo_verify.jpg) no-repeat; background-size: cover; background-position: center;">
+        <div class="container-fluid pt-4">
+            <div class="container-body">
+                <div class="justify-content-center">
+                    <form id="verify-age-form" autocomplete="off" novalidate>
+                        <div>
+                            <img src="<?php echo $enConfigClient['environment']['s3_uploads_url']; ?>/images/logout/loggedout-program-logo.png"></img>
                         </div>
-                        <div class="messageWrapper">
-                            <div class="lines line1">MARCH 15 - APRIL 6, 2021</div>
-                            <div class="lines line1">TAKE YOUR SHOT AT WINNING</div>
-                            <div class="lines line2">FABULOUS PRIZES!</div>
-                        </div>
-                        <p class="h1 text-center mb-4">
-                            We need to check your ID before you proceed.
-                            <br class="mb-4">
-                            You must be of legal drinking age to enter this site.
-                        </p>
-                        <div class="form-row">
-                            <div class="form-group text-center col-4">
-                                <label>Month</label>
-
-                                <select class="form-control custom-select" name="dob_month" required>
-                                    <option selected></option>
+                        <h1>We need to check your ID</h1>
+                        <h4>You must be of legal drinking age to enter this site.</h4>
+                        <div class="custom-form-row text-center">
+                            <div class="form-group">
+                                <select class="form-control custom-select custom-select-month" name="dob_month" required>
+                                    <option value="" selected>MM</option>
 
                                     <?php foreach (range(1, 12) as $month) { ?>
                                         <?php $month = str_pad($month, 2, 0, STR_PAD_LEFT); ?>
@@ -111,11 +91,9 @@ $registrationAgeMinimum = $enConfigClient->getDatabaseConfig('registration_age_m
                                 </div>
                             </div>
 
-                            <div class="form-group text-center col-4">
-                                <label>Day</label>
-
-                                <select class="form-control custom-select" name="dob_day" required>
-                                    <option selected></option>
+                            <div class="form-group">
+                                <select class="form-control custom-select custom-select-day" name="dob_day" required>
+                                    <option value="" selected>DD</option>
 
                                     <?php foreach (range(1, 31) as $day) { ?>
                                         <?php $day = str_pad($day, 2, 0, STR_PAD_LEFT); ?>
@@ -128,16 +106,14 @@ $registrationAgeMinimum = $enConfigClient->getDatabaseConfig('registration_age_m
                                 </div>
                             </div>
 
-                            <div class="form-group text-center col-4">
-                                <label>Year</label>
-
-                                <select class="form-control custom-select" name="dob_year" required>
-                                    <option selected></option>
+                            <div class="form-group">
+                                <select class="form-control custom-select custom-select-year" name="dob_year" required>
+                                    <option value="" selected>YYYY</option>
 
                                     <?php
-                                        $currentYear = (new \DateTime)->format('Y');
-                                        foreach (array_reverse(range($currentYear - 100, $currentYear)) as $year) {
-                                    ?>
+                                    $currentYear = (new \DateTime)->format('Y');
+                                    foreach (array_reverse(range($currentYear - 100, $currentYear)) as $year) {
+                                        ?>
                                         <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
                                     <?php } ?>
                                 </select>
@@ -146,48 +122,39 @@ $registrationAgeMinimum = $enConfigClient->getDatabaseConfig('registration_age_m
                                     Please select a year
                                 </div>
                             </div>
-                        </div>
 
-                        <button type="submit" class="btn btn-lg btn-primary btn-block en-button-animations-shrink-effect">Enter</button>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-lg btn-primary btn-block">Enter</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
-
+                <div id="verify-age-failed" class="d-none">
+                    <h1>
+                        Sorry, you must be <?php echo $registrationAgeMinimum; ?> or older to view this site.
+                    </h1>
+                </div>
                 <div class="page-footer">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div><strong>BUD LIGHT&reg; INDY MARCH TO THE CHAMPIONSHIP</strong></div>
-                            <div>
-                                No Purchase Necessary. Open to IL and IN residents 21+. Begins at 7:00 p.m. EDT on 3/14/21 and ends at 11:59 pm on 4/5/21.
-                                Multiple game periods. See <a href="/images/pdf/rules-terms.pdf" target="_blank" class="text-link">Official Rules</a>
-                                at www.budlighthoopsindy.com for entry deadlines, prizes and details. Message and data rates may apply.
-                                Void where prohibited.
-                            </div>
-
-                            <br>
-
-                            <div><strong>ENJOY RESPONSIBLY</strong></div>
-
-                            <div>&copy; 2022 Anheuser-Busch, Bud Light&reg; Beer, St. Louis, MO</div>
-                            <div>
-                                <a href="https://www.budlight.com/en/privacy-policy.html" target="_blank" class="text-link">Terms of Service</a> and
-                                <a href="https://www.budlight.com/en/terms-and-conditions.html" target="_blank" class="text-link">Privacy Policy</a>.
-                                <a href="https://www.budlight.com/en/california-residents-privacy-rights.html" target="_blank" class="text-link">CA Privacy Info</a>.
-                            </div>
+                            <a href="https://www.budlight.com/en/privacy-policy.html" target="_blank" data-gtm-dimension="v2/Logged_Out/Initial/Link_Success/Privacy_Client">Privacy Policy</a> |
+                            <a href="https://www.budlight.com/en/terms-and-conditions.html" target="_blank">Terms of Use</a> |
+                            <a href="<?php echo $enConfigClient['environment']['s3_uploads_url']; ?>/images/pdf/rules-terms.pdf" target="_blank">Rules</a> |
+                            <a href="https://www.budlight.com/en/california-residents-privacy-rights.html" target="_blank">CA Privacy Info</a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="verify-age-failed" class="container-fluid pt-4 d-none">
-            <div class="row justify-content-center">
-                <div class="col-sm-12 col-md-9 col-xl-4">
-                    <div class="failedWrapper">
-                        <img src="https://budlight-mm-uploads.s3-us-west-2.amazonaws.com/images/logout/Bud-Light-Indy-MDMM-500h.png" class="img-fluid mb-3">
-
-                        <p class="h1 text-center">
-                            Sorry, you must be <?php echo $registrationAgeMinimum; ?> or older to view this site.
-                        </p>
+                    <div class="row no-margin-bottom">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <strong>BUD LIGHT<sup>&reg;</sup> MARCH TO THE CHAMPIONSHIP SWEEPSTAKES</strong><br>
+                            <p>NO PURCHASE NECESSARY. Open to U.S. residents 21+. Begins on 3/1/2022 and ends on 4/6/2022. See <a href="<?php echo $enConfigClient['environment']['s3_uploads_url']; ?>/images/pdf/rules-terms.pdf">Official Rules</a> at <a href="https://www.budlighthoopschallenge.com/" target="_blank">budlighthoopschallenge.com</a> for entry, prize, and details. Message and data rates may apply. Void where prohibited.</p>
+                            <p>&copy; 2022 A-B, BUD LIGHT &reg; BEER, ST. LOUIS, MO. [110 calories, 6.6g carbs, 0.9g protein and 0.0g fat, per 12 oz.], BUD LIGHT &reg; SELTZER, ST. LOUIS, MO. [100 calories, 2.0g carbs, &lt;1g sugar and 0.0g fat, per 12 oz.] </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <strong>ENJOY RESPONSIBLY.</strong><br>
+                            &copy; 2021 Anheuser-Busch, Bud Light<sup>&reg;</sup> Beer, St. Louis, MO.
+                        </div>
                     </div>
                 </div>
             </div>

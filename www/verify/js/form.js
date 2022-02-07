@@ -1,11 +1,25 @@
 'use strict';
 
 $(function() {
+    function geturlparam(param) {
+        var url = decodeURIComponent(window.location.search.substring(1)),
+            urlvar = url.split('&'),
+            pname,
+            i;
+
+        for (i = 0; i < urlvar.length; i++) {
+            pname = urlvar[i].split('=');
+
+            if (pname[0] === param) {
+                return pname[1] === undefined ? true : pname[1];
+            }
+        }
+    };
+
     $('#verify-age-form').on('submit', function(event) {
         event.preventDefault();
 
-        var form = $(event.target);
-        var getReferrer = geturlparam('referrer');
+        var form = $(this);
 
         /**
          * Allows custom style for bootstrap form validation.
@@ -23,7 +37,13 @@ $(function() {
             + '-' + formData.dob_day
         );
 
-        if (visitorAge < EngagedNation.Config.RegistrationAgeMinimum) {
+        if (
+            visitorAge < EngagedNation.Config.RegistrationAgeMinimum ||
+            formData.dob_month == '' ||
+            formData.dob_day == '' ||
+
+            formData.dob_year == ''
+        ) {
             this.remove();
             $('#verify-age-failed').removeClass('d-none');
             return;
@@ -31,9 +51,17 @@ $(function() {
 
         if (window.Storage !== 'undefined') {
             window.sessionStorage.setItem(EngagedNation.Constant.VERIFIED_AGE, visitorAge);
+            window.sessionStorage.setItem('enVerifiedDob', formData.dob_year + '-' + formData.dob_month + '-' + formData.dob_day);
         };
 
-        window.location.href = '/' + ((typeof getReferrer !== 'undefined') ? '?referrer=' + getReferrer : '');
+        var invite = geturlparam('invite'),
+            redirectTo = '/';
+
+        if (invite) {
+            redirectTo += '?invite=' + invite;
+        }
+
+        window.location.href = redirectTo;
 
         /**
          * @param {string} YYYY-MM-DD
@@ -50,21 +78,6 @@ $(function() {
             }
 
             return age;
-        }
-        
-        function geturlparam(param) {
-            var url = decodeURIComponent(window.location.search.substring(1)),
-                urlvar = url.split('&'),
-                pname,
-                i;
-
-            for (i = 0; i < urlvar.length; i++) {
-                pname = urlvar[i].split('=');
-
-                if (pname[0] === param) {
-                    return pname[1] === undefined ? true : pname[1];
-                }
-            }
         }
 
         /**
