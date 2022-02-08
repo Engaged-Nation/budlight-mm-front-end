@@ -1,0 +1,333 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto.eot'); /* IE9 Compat Modes */
+    src: url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto.woff2') format('woff2'), /* Modern Browsers */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto.woff') format('woff'), /* Modern Browsers */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto.svg') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto-Bold.eot'); /* IE9 Compat Modes */
+    src: url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto-Bold.woff2') format('woff2'), /* Modern Browsers */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto-Bold.woff') format('woff'), /* Modern Browsers */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/Roboto-Bold.svg') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoCondensed-Bold';
+    src: url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/RobotoCondensed-Bold.eot'); /* IE9 Compat Modes */
+    src: url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/RobotoCondensed-Bold.woff2') format('woff2'), /* Modern Browsers */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/RobotoCondensed-Bold.woff') format('woff'), /* Modern Browsers */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/RobotoCondensed-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/RobotoCondensed-Bold.svg') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TitlingGothicFB-Compressed';
+    src: url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBCompressed-Medium.eot'); /* IE9 Compat Modes */
+    src: url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBCompressed-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBCompressed-Medium.woff2') format('woff2'), /* Modern Browsers */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBCompressed-Medium.woff') format('woff'), /* Modern Browsers */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBCompressed-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBCompressed-Medium.svg') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TitlingGothicFB-Standard';
+    src: url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBNarrow-Standard.eot'); /* IE9 Compat Modes */
+    src: url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBNarrow-Standard.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBNarrow-Standard.woff2') format('woff2'), /* Modern Browsers */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBNarrow-Standard.woff') format('woff'), /* Modern Browsers */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBNarrow-Standard.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('https://portalcore-assets.s3-us-west-2.amazonaws.com/fonts/TitlingGothicFBNarrow-Standard.svg') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+img {
+    margin: 0 auto;
+    display: block;
+}
+
+html {
+    background: #0c121e;
+    height: 100%
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+}
+
+.container-fluid {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+h1 {
+    font-family: TitlingGothicFB-Compressed;
+    font-size: 30px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    object-fit: contain;
+    font-family: TitlingGothicFB-Standard;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+
+    margin-bottom: 15px;
+}
+
+#verify-age-form
+#verify-age-failed {
+    max-width: 920px;
+    padding: 0 10px;
+}
+
+.custom-form-row  {
+    margin-bottom: 20px;
+}
+
+.custom-form-row .form-group {
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+}
+
+.custom-select {
+    background: #888888;
+    border: none;
+
+    object-fit: contain;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    text-align-last: center;
+    color: #fff;
+    cursor: pointer;
+
+
+    padding: 15px;
+    height: auto;
+    width: 150px;
+
+    border-radius: 0;
+}
+
+.custom-select.is-invalid, .was-validated .custom-select:invalid {
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(.75em + .375rem) calc(.75em + .375rem);
+    background-color: #888888;
+}
+
+.custom-select:focus {
+    background: #888888;
+    color: #fff;
+}
+
+button {
+    text-transform: uppercase !important;
+}
+
+button[type="submit"],
+.optanon-alert-box-wrapper .optanon-button-more .optanon-alert-box-button-middle button,
+.optanon-alert-box-wrapper .optanon-alert-box-button-middle button {
+    object-fit: contain;
+    font-family: Roboto !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff !important;
+
+    background: #01a0e2;
+    width: 150px;
+    padding: 14px 0 !important;
+    border: none;
+    border-radius: 0;
+    transition: none;
+}
+
+button[type="submit"] {
+    margin: 0;
+}
+
+.optanon-alert-box-wrapper .optanon-button-more .optanon-alert-box-button-middle button,
+.optanon-alert-box-wrapper .optanon-alert-box-button-middle button {
+    max-width: 183px;
+    width: 183px;
+
+    font-size: 18px !important;
+    line-height: 1;
+}
+
+button:hover,
+button:focus,
+button:active {
+    background: #082e93 !important;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    outline: none;
+}
+
+.mb-3 {
+    margin: 50px auto !important;
+    display: block;
+}
+
+.form-row {
+    margin-bottom: 18px;
+}
+
+.page-footer {
+    object-fit: contain;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.page-footer p {
+    margin-bottom: 25px;
+}
+
+.page-footer strong {
+    font-weight: bold;
+}
+
+.page-footer .row {
+    margin-bottom: 25px;
+}
+
+.page-footer a {
+    color: #fff;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+#verify-age-wrapper .optanon-alert-box-wrapper .optanon-alert-box-button-middle {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+#verify-age-wrapper .optanon-alert-box-bg .optanon-alert-box-button-container {
+    margin-top: -25px;
+}
+
+#verify-age-wrapper .optanon-alert-box-wrapper .optanon-alert-box-button .optanon-alert-box-close,
+#verify-age-wrapper .optanon-alert-box-bg .optanon-alert-box-button.optanon-button-close {
+    display: none !important;
+}
+
+#alert-box-message {
+    object-fit: contain;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+
+    max-width: 80%;
+}
+
+.optanon-alert-box-wrapper {
+    background: #888 !important;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 1439px) {
+    body {
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #verify-age-wrapper .optanon-alert-box-wrapper .optanon-alert-box-body {
+        margin-right: 20px;
+        margin-left: 20px;
+        padding-top: 10px;
+    }
+
+    #verify-age-wrapper .optanon-alert-box-bg .optanon-alert-box-button-container {
+        position: relative;
+        text-align: center;
+        margin: 5px;
+        top: auto;
+        right: auto;
+        padding-right: 0;
+    }
+
+    #verify-age-wrapper .optanon-alert-box-wrapper .optanon-alert-box-bg p {
+        max-width: initial;
+    }
+
+    #verify-age-wrapper .optanon-alert-box-wrapper .optanon-alert-box-button {
+        float: none;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    h1 {
+        font-size: calc(30px + 20 * ((100vw - 320px) / 704));
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 50px;
+    }
+}
