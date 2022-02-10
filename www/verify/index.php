@@ -139,7 +139,8 @@ $registrationAgeMinimum = $enConfigClient->getDatabaseConfig('registration_age_m
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <a href="https://www.budlight.com/en/privacy-policy.html" target="_blank" data-gtm-dimension="v2/Logged_Out/Initial/Link_Success/Privacy_Client">Privacy Policy</a> |
                             <a href="https://www.budlight.com/en/terms-and-conditions.html" target="_blank">Terms of Use</a> |
-                            <a href="<?php echo $enConfigClient['environment']['s3_uploads_url']; ?>/images/pdf/rules-terms.pdf" target="_blank">Rules</a> |
+                            <a href="<?php echo $enConfigClient['environment']['s3_uploads_url']; ?>/images/pdf/sweepstakes-rules.pdf" target="_blank">Sweepstakes Rules</a> |
+                            <a href="<?php echo $enConfigClient['environment']['s3_uploads_url']; ?>/images/pdf/contest-rules.pdf" target="_blank">Contest Rules</a> |
                             <a href="https://www.budlight.com/en/california-residents-privacy-rights.html" target="_blank">CA Privacy Info</a>
                         </div>
                     </div>
